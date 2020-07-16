@@ -10,7 +10,7 @@ import UIKit
 import Pulley
 import CardViewList
 
-class DrawerContentViewController: UIViewController {
+class DrawerContentViewController: UIViewController, CardViewListDelegete {
 
     // Pulley can apply a custom mask to the panel drawer. This variable toggles an example.
     private var shouldDisplayCustomMaskExample = false
@@ -19,7 +19,7 @@ class DrawerContentViewController: UIViewController {
     @IBOutlet var bottomSeperatorView: UIView!
     fileprivate var cardViewList: CardViewList!
     @IBOutlet weak var cardContainerHorizontal: UIView!
-  
+    fileprivate let horizontalCardIdentifier = "horizontalCard"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,15 +63,79 @@ class DrawerContentViewController: UIViewController {
        
         var cardViewControllers1 = [UIViewController]()
         for _ in 1 ... 5 {
-            cardViewControllers1.append(CardTwoViewController(nibName: "CardTwoViewController", bundle: nil))
+            let cardController = CardTwoViewController(nibName: "CardTwoViewController", bundle: nil)
+            cardViewControllers1.append(cardController)
         }
+
         self.cardViewList.animationScroll = .transformToBottom
         self.cardViewList.isClickable = true
         self.cardViewList.clickAnimation = .bounce
         self.cardViewList.grid = 1
         self.cardViewList.generateCardViewList(containerView: cardContainerHorizontal, viewControllers: cardViewControllers1, listType: .horizontal, identifier: "horizontalCard")
+        
+        self.cardViewList.delegete = self
 
     }
+    
+    
+       func cardView(willDisplay scrollView: UIScrollView, identifierCards identifier: String) {
+           if identifier == horizontalCardIdentifier {
+               print("Horizontal card view will display!")
+           } else {
+               print("Vertical card view will display!")
+           }
+       }
+       
+       // You can control CardView from here
+       func cardView(_ scrollView: UIScrollView, willAttachCardView cardView: UIView, identifierCards identifier: String, index: Int) {
+           print(cardView.frame)
+           if identifier == horizontalCardIdentifier {
+               print("Horizontal card view attached!")
+           } else {
+               print("Vertical card view attached!")
+           }
+       }
+       
+       func cardView(_ scrollView: UIScrollView, willAttachCardViewController cardViewController: UIViewController, identifierCards identifier: String, index: Int) {
+           if identifier == horizontalCardIdentifier {
+               print("Horizontal card view attached!")
+           } else {
+               print("Vertical card view attached!")
+           }
+       }
+       
+       func cardView(_ scrollView: UIScrollView, didFinishDisplayCardViews cardViews: [UIView], identifierCards identifier: String) {
+           print(cardViews.count)
+           if identifier == horizontalCardIdentifier {
+               print("Horizontal card view finish display!")
+           } else {
+               print("Vertical card view finish display!")
+           }
+       }
+       
+       func cardView(_ scrollView: UIScrollView, didFinishDisplayCardViewControllers cardViewsController: [UIViewController], identifierCards identifier: String) {
+           if identifier == horizontalCardIdentifier {
+               print("Horizontal card view finish display!")
+           } else {
+               print("Vertical card view finish display!")
+           }
+       }
+       
+       func cardView(_ scrollView: UIScrollView, didSelectCardView cardView: UIView, identifierCards identifier: String, index: Int) {
+           if identifier == horizontalCardIdentifier {
+               print("Horizontal card view didSelectCardView!", index)
+           } else {
+               print("Vertical card view finish display!")
+           }
+       }
+       
+       func cardView(_ scrollView: UIScrollView, didSelectCardViewController cardViewController: UIViewController, identifierCards identifier: String, index: Int) {
+           if identifier == horizontalCardIdentifier {
+               print("Horizontal card view didSelectCardViewController!", index)
+           } else {
+               print("Vertical card view finish display!")
+           }
+       }
     
     @objc fileprivate func bounceDrawer() {
         
@@ -91,7 +155,7 @@ extension DrawerContentViewController: PulleyDrawerViewControllerDelegate {
     func partialRevealDrawerHeight(bottomSafeArea: CGFloat) -> CGFloat
     {
         // For devices with a bottom safe area, we want to make our drawer taller. Your implementation may not want to do that. In that case, disregard the bottomSafeArea value.
-        return 264.0 + (pulleyViewController?.currentDisplayMode == .drawer ? bottomSafeArea : 0.0)
+        return 200.0 + (pulleyViewController?.currentDisplayMode == .drawer ? bottomSafeArea : 0.0)
     }
     
     func supportedDrawerPositions() -> [PulleyPosition] {

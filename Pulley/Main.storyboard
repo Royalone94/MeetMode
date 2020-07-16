@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQw-rH-Lx3">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="513"/>
                                 <connections>
                                     <segue destination="jlc-SX-8Vl" kind="embed" id="pCp-dd-iuP"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4p9-KZ-WZu">
-                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                <rect key="frame" x="0.0" y="513" width="375" height="154"/>
                                 <connections>
                                     <segue destination="ivy-3E-KkU" kind="embed" id="zcF-Tq-AZj"/>
                                 </connections>
@@ -33,7 +33,7 @@
                         <constraints>
                             <constraint firstItem="js6-yh-KNb" firstAttribute="trailing" secondItem="4p9-KZ-WZu" secondAttribute="trailing" id="4wJ-0j-wA7"/>
                             <constraint firstItem="wQw-rH-Lx3" firstAttribute="leading" secondItem="js6-yh-KNb" secondAttribute="leading" id="8Np-3z-yEm"/>
-                            <constraint firstItem="4p9-KZ-WZu" firstAttribute="height" secondItem="wQw-rH-Lx3" secondAttribute="height" id="NfN-cE-8DQ"/>
+                            <constraint firstItem="4p9-KZ-WZu" firstAttribute="height" secondItem="wQw-rH-Lx3" secondAttribute="height" multiplier="0.3" id="NfN-cE-8DQ"/>
                             <constraint firstItem="js6-yh-KNb" firstAttribute="trailing" secondItem="wQw-rH-Lx3" secondAttribute="trailing" id="Rpk-PU-OQn"/>
                             <constraint firstAttribute="top" secondItem="wQw-rH-Lx3" secondAttribute="top" id="Ypp-Gp-Psz"/>
                             <constraint firstAttribute="bottomMargin" secondItem="4p9-KZ-WZu" secondAttribute="bottom" id="lat-e6-cWe"/>
@@ -56,11 +56,11 @@
             <objects>
                 <viewController storyboardIdentifier="PrimaryContentViewController" id="jlc-SX-8Vl" customClass="PrimaryContentViewController" customModule="PulleyDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wsZ-C5-y4c">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="513"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BcX-Cl-AEz">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="513"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -80,49 +80,16 @@
             </objects>
             <point key="canvasLocation" x="744.79999999999995" y="-47.676161919040482"/>
         </scene>
-        <!--Primary Transition Target View Controller-->
-        <scene sceneID="rC6-aE-yeD">
-            <objects>
-                <viewController storyboardIdentifier="PrimaryTransitionTargetViewController" id="cxY-AH-E4w" customClass="PrimaryTransitionTargetViewController" customModule="PulleyDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GtQ-yD-cjm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCA-wg-qrc">
-                                <rect key="frame" x="20" y="57" width="335" height="114"/>
-                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="114" id="7fZ-xV-Xe2"/>
-                                </constraints>
-                                <state key="normal" title="Go Back"/>
-                                <connections>
-                                    <action selector="goBackButtonPressedWithSender:" destination="cxY-AH-E4w" eventType="touchUpInside" id="4Zl-L0-x7e"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="JCA-wg-qrc" firstAttribute="leading" secondItem="lxe-wc-Z2x" secondAttribute="leading" constant="20" id="5Oc-xU-2E0"/>
-                            <constraint firstItem="lxe-wc-Z2x" firstAttribute="trailing" secondItem="JCA-wg-qrc" secondAttribute="trailing" constant="20" id="B66-EW-02O"/>
-                            <constraint firstItem="JCA-wg-qrc" firstAttribute="top" secondItem="GtQ-yD-cjm" secondAttribute="topMargin" constant="57" id="xod-DQ-3Nu"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="lxe-wc-Z2x"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tt9-jM-w71" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1609" y="152"/>
-        </scene>
         <!--Drawer Content View Controller-->
         <scene sceneID="1cR-cD-Gai">
             <objects>
                 <viewController storyboardIdentifier="DrawerContentViewController" id="ivy-3E-KkU" customClass="DrawerContentViewController" customModule="PulleyDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="amw-OD-m8D">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="154"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xO4-ph-Hxo">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="154"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2S4-TW-Cpq">

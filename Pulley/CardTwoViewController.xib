@@ -10,10 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardTwoViewController" customModule="PulleyDemo" customModuleProvider="target">
             <connections>
-                <outlet property="imgCard" destination="cqz-ch-Ocq" id="key-O5-Nmh"/>
                 <outlet property="imgProfile" destination="h4J-mX-oAX" id="DRg-Gg-yMp"/>
-                <outlet property="lblDistance" destination="y1Y-jw-8wB" id="inn-rW-ihA"/>
-                <outlet property="lblUserName" destination="39Y-PO-2Nh" id="Pow-JG-XlC"/>
+                <outlet property="lblDistance" destination="chO-Dq-hbB" id="jtc-BP-Di8"/>
+                <outlet property="lblUserName" destination="VYk-xc-zth" id="sUv-Gk-orp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,30 +21,30 @@
             <rect key="frame" x="0.0" y="0.0" width="349" height="166"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="cqz-ch-Ocq">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="cqz-ch-Ocq">
                     <rect key="frame" x="0.0" y="0.0" width="349" height="166"/>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icaksama1" translatesAutoresizingMaskIntoConstraints="NO" id="h4J-mX-oAX">
-                    <rect key="frame" x="137" y="9" width="75" height="75"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="75" id="Kd7-Zu-7OS"/>
-                        <constraint firstAttribute="width" constant="75" id="SFi-BR-G9K"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1Y-jw-8wB">
-                    <rect key="frame" x="100" y="131" width="150" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chO-Dq-hbB">
+                    <rect key="frame" x="102" y="135" width="150" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39Y-PO-2Nh">
-                    <rect key="frame" x="98" y="102" width="150" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYk-xc-zth">
+                    <rect key="frame" x="101" y="113" width="150" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icaksama1" translatesAutoresizingMaskIntoConstraints="NO" id="h4J-mX-oAX">
+                    <rect key="frame" x="137" y="25" width="75" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="Kd7-Zu-7OS"/>
+                        <constraint firstAttribute="width" constant="75" id="SFi-BR-G9K"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -58,7 +57,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="12" y="-362.51874062968517"/>
+            <point key="canvasLocation" x="13.5" y="-362"/>
         </view>
     </objects>
     <resources>

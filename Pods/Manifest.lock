@@ -1,0 +1,16 @@
+PODS:
+  - CardViewList (1.1.8)
+
+DEPENDENCIES:
+  - CardViewList
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - CardViewList
+
+SPEC CHECKSUMS:
+  CardViewList: d08614f3defc046e8200fb37e662c1a3f1255745
+
+PODFILE CHECKSUM: c5ef665610329225e5ae897c9086ad93b080129e
+
+COCOAPODS: 1.9.3

@@ -1,0 +1,6 @@
+module Pods_PulleyDemo {
+  umbrella header "Pods-PulleyDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

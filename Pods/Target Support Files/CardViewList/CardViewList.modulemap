@@ -1,0 +1,6 @@
+module CardViewList {
+  umbrella header "CardViewList-umbrella.h"
+
+  export *
+  module * { export * }
+}

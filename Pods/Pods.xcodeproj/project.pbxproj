@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3712A85C89389246781841A85DC7BC41 /* CardViewList-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFE44D25181B3192AB3E8CDF61A555F /* CardViewList-dummy.m */; };
+		56C77FD132CA9CF773FCA0B9364DB2EA /* CardViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA71077BB70D0720EF12902574BE7348 /* CardViewList.swift */; };
+		650482D956515C21ED774C7988AB1B22 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658A7458EA23EF725D5E3D503B175F5B /* Utilities.swift */; };
+		74410BAF4EE1982D1A0456105E5BEA1E /* Pods-PulleyDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C8C97488AE94B0FB3BDE64CC8B0E8D8 /* Pods-PulleyDemo-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A73D3D700CF3292F6F0AA569C644F018 /* CardViewList.h in Headers */ = {isa = PBXBuildFile; fileRef = B79CBC15F58DA4BE07D79BEFC4769EB4 /* CardViewList.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B17F3AEF96333523F28D6D37F0435F51 /* CardViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BE45ACBFAD1974799D3244A827E738 /* CardViewAnimation.swift */; };
+		C2A0882453ED17795D8D14A49CDBA3AA /* Pods-PulleyDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49860AFD4F179D958183D4FCF9E3555C /* Pods-PulleyDemo-dummy.m */; };
+		CEC81C32BD12C1E651C41E59D9F3169B /* CardViewList-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46BAF522DCB267A8AC6D66E5940D5A4B /* CardViewList-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		285E234E19B32AC9A6ED05E5A8FA0E6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCE962ADE221584EE003B2F2FD096BD8;
+			remoteInfo = CardViewList;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1DFE44D25181B3192AB3E8CDF61A555F /* CardViewList-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CardViewList-dummy.m"; sourceTree = "<group>"; };
+		2BB5B5347973407C2B969EF6733C981D /* CardViewList-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CardViewList-prefix.pch"; sourceTree = "<group>"; };
+		2FC02B076A24D4BBD0A8687F90CE686E /* libPods-PulleyDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-PulleyDemo.a"; path = "libPods-PulleyDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46BAF522DCB267A8AC6D66E5940D5A4B /* CardViewList-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CardViewList-umbrella.h"; sourceTree = "<group>"; };
+		46BE45ACBFAD1974799D3244A827E738 /* CardViewAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardViewAnimation.swift; path = CardViewList/CardViewList/CardViewAnimation.swift; sourceTree = "<group>"; };
+		49860AFD4F179D958183D4FCF9E3555C /* Pods-PulleyDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PulleyDemo-dummy.m"; sourceTree = "<group>"; };
+		5D634F4508EF17772F092DCAE46B1EA3 /* Pods-PulleyDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PulleyDemo.release.xcconfig"; sourceTree = "<group>"; };
+		641BE227B581975D9D16F9DCECF8F0FA /* CardViewList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CardViewList.debug.xcconfig; sourceTree = "<group>"; };
+		658A7458EA23EF725D5E3D503B175F5B /* Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = CardViewList/CardViewList/Utilities.swift; sourceTree = "<group>"; };
+		6C3EF7859F55347576B3A4416EB11B99 /* CardViewList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CardViewList.release.xcconfig; sourceTree = "<group>"; };
+		839930A982DE7B078C09BB09CBFEE33E /* Pods-PulleyDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PulleyDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		925BA100F8B7B7CB7AD4F8190996BA52 /* libCardViewList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCardViewList.a; path = libCardViewList.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C8C97488AE94B0FB3BDE64CC8B0E8D8 /* Pods-PulleyDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PulleyDemo-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B79CBC15F58DA4BE07D79BEFC4769EB4 /* CardViewList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardViewList.h; path = CardViewList/CardViewList/CardViewList.h; sourceTree = "<group>"; };
+		B83737DBC26131F235C739C82D100E1D /* Pods-PulleyDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PulleyDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CA71077BB70D0720EF12902574BE7348 /* CardViewList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardViewList.swift; path = CardViewList/CardViewList/CardViewList.swift; sourceTree = "<group>"; };
+		E5596BD9C538B25F66085F189F868581 /* CardViewList.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CardViewList.modulemap; sourceTree = "<group>"; };
+		F6597CA568160A930E9FEF033B8CB67D /* Pods-PulleyDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PulleyDemo.modulemap"; sourceTree = "<group>"; };
+		FE17A2C2316A913FF9A141F6B584F41A /* Pods-PulleyDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PulleyDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D7137C240ABB3959D78C2CA9D60784C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7EE098D980816E16BC8DE287045BD68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E396A0EB495FAB989A1C5FD1119A606 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5596BD9C538B25F66085F189F868581 /* CardViewList.modulemap */,
+				1DFE44D25181B3192AB3E8CDF61A555F /* CardViewList-dummy.m */,
+				2BB5B5347973407C2B969EF6733C981D /* CardViewList-prefix.pch */,
+				46BAF522DCB267A8AC6D66E5940D5A4B /* CardViewList-umbrella.h */,
+				641BE227B581975D9D16F9DCECF8F0FA /* CardViewList.debug.xcconfig */,
+				6C3EF7859F55347576B3A4416EB11B99 /* CardViewList.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CardViewList";
+			sourceTree = "<group>";
+		};
+		505F651832C380649685DCB36DD05417 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				925BA100F8B7B7CB7AD4F8190996BA52 /* libCardViewList.a */,
+				2FC02B076A24D4BBD0A8687F90CE686E /* libPods-PulleyDemo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5956F487A7C80AC602519E92BDEEAFFA /* Pods-PulleyDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F6597CA568160A930E9FEF033B8CB67D /* Pods-PulleyDemo.modulemap */,
+				B83737DBC26131F235C739C82D100E1D /* Pods-PulleyDemo-acknowledgements.markdown */,
+				FE17A2C2316A913FF9A141F6B584F41A /* Pods-PulleyDemo-acknowledgements.plist */,
+				49860AFD4F179D958183D4FCF9E3555C /* Pods-PulleyDemo-dummy.m */,
+				9C8C97488AE94B0FB3BDE64CC8B0E8D8 /* Pods-PulleyDemo-umbrella.h */,
+				839930A982DE7B078C09BB09CBFEE33E /* Pods-PulleyDemo.debug.xcconfig */,
+				5D634F4508EF17772F092DCAE46B1EA3 /* Pods-PulleyDemo.release.xcconfig */,
+			);
+			name = "Pods-PulleyDemo";
+			path = "Target Support Files/Pods-PulleyDemo";
+			sourceTree = "<group>";
+		};
+		5E81C534B8F5A9C70834903C2C78B6F8 /* CardViewList */ = {
+			isa = PBXGroup;
+			children = (
+				46BE45ACBFAD1974799D3244A827E738 /* CardViewAnimation.swift */,
+				B79CBC15F58DA4BE07D79BEFC4769EB4 /* CardViewList.h */,
+				CA71077BB70D0720EF12902574BE7348 /* CardViewList.swift */,
+				658A7458EA23EF725D5E3D503B175F5B /* Utilities.swift */,
+				0E396A0EB495FAB989A1C5FD1119A606 /* Support Files */,
+			);
+			name = CardViewList;
+			path = CardViewList;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				FAF460D2D220D86B582E3266BE119C81 /* Pods */,
+				505F651832C380649685DCB36DD05417 /* Products */,
+				DA056F3B63932C7F3F2C4EFA3E06AF44 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA056F3B63932C7F3F2C4EFA3E06AF44 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5956F487A7C80AC602519E92BDEEAFFA /* Pods-PulleyDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FAF460D2D220D86B582E3266BE119C81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E81C534B8F5A9C70834903C2C78B6F8 /* CardViewList */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E33B5A3FCB3035FD949FE9F8A6CBC288 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74410BAF4EE1982D1A0456105E5BEA1E /* Pods-PulleyDemo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E686892CBF368AEDC606C2F51458D60C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEC81C32BD12C1E651C41E59D9F3169B /* CardViewList-umbrella.h in Headers */,
+				A73D3D700CF3292F6F0AA569C644F018 /* CardViewList.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9C115BF61D2F413A0D12C7A31AE8DD90 /* Pods-PulleyDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7934B35D6149BDC675C3670096809B7 /* Build configuration list for PBXNativeTarget "Pods-PulleyDemo" */;
+			buildPhases = (
+				E33B5A3FCB3035FD949FE9F8A6CBC288 /* Headers */,
+				20E625DBC6DEA3D08C54D1BEB2945695 /* Sources */,
+				E7EE098D980816E16BC8DE287045BD68 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D06ACB94A917E4DED3FDF6A12DB52422 /* PBXTargetDependency */,
+			);
+			name = "Pods-PulleyDemo";
+			productName = "Pods-PulleyDemo";
+			productReference = 2FC02B076A24D4BBD0A8687F90CE686E /* libPods-PulleyDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FCE962ADE221584EE003B2F2FD096BD8 /* CardViewList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39BC0E21D0EB8FBBCC78D2FF8A1A5A69 /* Build configuration list for PBXNativeTarget "CardViewList" */;
+			buildPhases = (
+				E686892CBF368AEDC606C2F51458D60C /* Headers */,
+				2FDB9E9CAC4A595974AB713512945C0E /* Sources */,
+				6D7137C240ABB3959D78C2CA9D60784C /* Frameworks */,
+				55C6E1FC3EF49F4B3782DCB04BD610F5 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CardViewList;
+			productName = CardViewList;
+			productReference = 925BA100F8B7B7CB7AD4F8190996BA52 /* libCardViewList.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 505F651832C380649685DCB36DD05417 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCE962ADE221584EE003B2F2FD096BD8 /* CardViewList */,
+				9C115BF61D2F413A0D12C7A31AE8DD90 /* Pods-PulleyDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55C6E1FC3EF49F4B3782DCB04BD610F5 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/CardViewList/CardViewList.modulemap",
+				"${PODS_ROOT}/Headers/Public/CardViewList/CardViewList-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/CardViewList-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/CardViewList/CardViewList.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/CardViewList/CardViewList-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20E625DBC6DEA3D08C54D1BEB2945695 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2A0882453ED17795D8D14A49CDBA3AA /* Pods-PulleyDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FDB9E9CAC4A595974AB713512945C0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B17F3AEF96333523F28D6D37F0435F51 /* CardViewAnimation.swift in Sources */,
+				3712A85C89389246781841A85DC7BC41 /* CardViewList-dummy.m in Sources */,
+				56C77FD132CA9CF773FCA0B9364DB2EA /* CardViewList.swift in Sources */,
+				650482D956515C21ED774C7988AB1B22 /* Utilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D06ACB94A917E4DED3FDF6A12DB52422 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CardViewList;
+			target = FCE962ADE221584EE003B2F2FD096BD8 /* CardViewList */;
+			targetProxy = 285E234E19B32AC9A6ED05E5A8FA0E6A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3CAA5211B76272EF30B01C2E8810E5FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 641BE227B581975D9D16F9DCECF8F0FA /* CardViewList.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CardViewList/CardViewList-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/CardViewList/CardViewList.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CardViewList;
+				PRODUCT_NAME = CardViewList;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		916E0404255105F480DC4950B7625F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		945445DD278F219B8BDEF071E1F94D17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D634F4508EF17772F092DCAE46B1EA3 /* Pods-PulleyDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PulleyDemo/Pods-PulleyDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9A56FC511FE8BA76097BFDE465CB1621 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 839930A982DE7B078C09BB09CBFEE33E /* Pods-PulleyDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PulleyDemo/Pods-PulleyDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD202749E24A6B7D76AEBBE0905114EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C3EF7859F55347576B3A4416EB11B99 /* CardViewList.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CardViewList/CardViewList-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/CardViewList/CardViewList.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CardViewList;
+				PRODUCT_NAME = CardViewList;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39BC0E21D0EB8FBBCC78D2FF8A1A5A69 /* Build configuration list for PBXNativeTarget "CardViewList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CAA5211B76272EF30B01C2E8810E5FF /* Debug */,
+				AD202749E24A6B7D76AEBBE0905114EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				916E0404255105F480DC4950B7625F7A /* Debug */,
+				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7934B35D6149BDC675C3670096809B7 /* Build configuration list for PBXNativeTarget "Pods-PulleyDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A56FC511FE8BA76097BFDE465CB1621 /* Debug */,
+				945445DD278F219B8BDEF071E1F94D17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

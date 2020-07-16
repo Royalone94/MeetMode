@@ -30,9 +30,9 @@ class CardTwoViewController: UIViewController {
         
 
         let friends = Friend().getFriends()
-        
-        lblUserName.text = friends[self.view.tag - 1].username
-        
+        let friend = friends[self.view.tag - 1]
+        lblUserName.text = friend.username
+        lblDistance.text = String(friend.distance) + " mi"
         
         let singleTap =   UITapGestureRecognizer(target: self, action: #selector(self.gestureCalled(gesture:)))
         imgCard.isUserInteractionEnabled = true

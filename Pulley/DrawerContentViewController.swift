@@ -67,10 +67,19 @@ class DrawerContentViewController: UIViewController, CardViewListDelegete {
             cardViewControllers1.append(cardController)
         }
 
-        self.cardViewList.animationScroll = .transformToBottom
+        self.cardViewList.animationScroll = .transformToLeft
         self.cardViewList.isClickable = true
-        self.cardViewList.clickAnimation = .bounce
+//        cardViewList.animationScroll = .none
+        /** Set animation click for CardView. Default is none */
+//        cardViewList.clickAnimation = .none
         self.cardViewList.grid = 1
+        cardViewList.maxWidth = 100
+            
+        /** Set max height of CardView in percent(%) of containerView. Default is 100 */
+        cardViewList.maxHeight = 100
+        self.cardViewList.cornerRadius = 12.0
+        /** Set shadow size of card view in pixel. Default is 5.0 */
+        cardViewList.isShadowEnable = false
         self.cardViewList.generateCardViewList(containerView: cardContainerHorizontal, viewControllers: cardViewControllers1, listType: .horizontal, identifier: "horizontalCard")
         
         self.cardViewList.delegete = self

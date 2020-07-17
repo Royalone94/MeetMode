@@ -145,11 +145,11 @@ class PrimaryContentViewController: UIViewController, CLLocationManagerDelegate 
 extension PrimaryContentViewController: FriendDelegate {
     
     func makeUIAdjustmentsForFullscreen(progress: CGFloat, bottomSafeArea: CGFloat) {
-
+        print("makeUIAdjustmentsForFullscreen")
     }
     
     func drawerChangedDistanceFromBottom(drawer: PulleyViewController, distance: CGFloat, bottomSafeArea: CGFloat) {
-
+        print("drawerChangedDistanceFromBottom")
     }
     
     func selectIndex(index: Int) {

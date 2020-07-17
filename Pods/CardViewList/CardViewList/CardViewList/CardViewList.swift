@@ -473,7 +473,7 @@ open class CardViewList: NSObject, UIScrollViewDelegate {
     }
     
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        startAnimation(scrollView: scrollView)
+//        startAnimation(scrollView: scrollView)
     }
 }
 

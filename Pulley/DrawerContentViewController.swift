@@ -49,6 +49,10 @@ class DrawerContentViewController: UIViewController, CardViewListDelegete {
         }
     }
     
+    @IBAction func openDirectionsApp(_ sender: Any) {
+        print("openDirectionsApp")
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 

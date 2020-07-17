@@ -115,16 +115,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qg4-fv-3JH">
-                                <rect key="frame" x="21" y="35" width="31" height="15"/>
+                                <rect key="frame" x="21" y="38" width="31" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnZ-Kg-Qex">
-                                <rect key="frame" x="313" y="12" width="46" height="30"/>
+                                <rect key="frame" x="347" y="12" width="29" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" backgroundImage="share"/>
+                                <connections>
+                                    <action selector="openDirectionsApp:" destination="ivy-3E-KkU" eventType="touchUpInside" id="daH-At-MJT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.058823529411764705" green="0.054901960784313725" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -155,4 +158,7 @@
             <point key="canvasLocation" x="744.79999999999995" y="349.92503748125938"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="share" width="29" height="32"/>
+    </resources>
 </document>

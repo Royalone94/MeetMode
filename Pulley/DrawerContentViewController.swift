@@ -123,7 +123,8 @@ class DrawerContentViewController: UIViewController, CardViewListDelegete {
        
        func cardView(_ scrollView: UIScrollView, didSelectCardView cardView: UIView, identifierCards identifier: String, index: Int) {
            if identifier == horizontalCardIdentifier {
-               print("Horizontal card view didSelectCardView!", index)
+                print("Horizontal card view didSelectCardView!", index)
+                self.pulleyViewController?.selectIndex(index)
            } else {
                print("Vertical card view finish display!")
            }
@@ -176,3 +177,15 @@ extension DrawerContentViewController: PulleyDrawerViewControllerDelegate {
     }
 }
 
+
+extension PulleyViewController {
+    public func selectIndex(_ index: Int) {
+        (primaryContentViewController as? FriendDelegate)?.selectIndex?(index: index)
+    }
+}
+
+
+@objc public protocol FriendDelegate: PulleyPrimaryContentControllerDelegate {
+    
+        @objc optional func selectIndex(index: Int)
+}

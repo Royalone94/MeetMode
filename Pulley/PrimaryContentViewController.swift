@@ -15,6 +15,8 @@ class PrimaryContentViewController: UIViewController, CLLocationManagerDelegate 
     @IBOutlet var mapView: MKMapView!
     
     fileprivate let locationManager: CLLocationManager = CLLocationManager()
+    var currentLocation: CLLocationCoordinate2D = CLLocationCoordinate2D()
+    var currentRouteOverlay: MKRoute = MKRoute()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,11 +48,13 @@ class PrimaryContentViewController: UIViewController, CLLocationManagerDelegate 
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
        
-       let location = locations.last! as CLLocation
-       let currentLocation = location.coordinate
-       let coordinateRegion = MKCoordinateRegion(center: currentLocation, latitudinalMeters: 800, longitudinalMeters: 800)
-       mapView.setRegion(coordinateRegion, animated: true)
-       locationManager.stopUpdatingLocation()
+        let location = locations.last! as CLLocation
+        let currentLocation = location.coordinate
+        
+        self.currentLocation = currentLocation
+        let coordinateRegion = MKCoordinateRegion(center: currentLocation, latitudinalMeters: 800, longitudinalMeters: 800)
+        mapView.setRegion(coordinateRegion, animated: true)
+        locationManager.stopUpdatingLocation()
     }
         
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error){
@@ -83,10 +87,10 @@ class PrimaryContentViewController: UIViewController, CLLocationManagerDelegate 
                     return
                 }
                 
-//                if(self.currentRouteOverlay != nil)
-//                {
-//                    self.mapView.remove(self.currentRouteOverlay!)
-//                }
+                if(self.currentRouteOverlay != nil)
+                {
+                    self.mapView.removeOverlay(self.currentRouteOverlay.polyline)
+                }
 
                 //in response.routes you will get the routes avaiables
                 for route in response.routes {
@@ -100,7 +104,7 @@ class PrimaryContentViewController: UIViewController, CLLocationManagerDelegate 
                 
                 //here I add the first to the MapView
                 let route = response.routes[0]
-//                self.currentRouteOverlay = route.polyline
+                self.currentRouteOverlay = route
                 self.mapView.addOverlay(route.polyline, level: .aboveRoads)
                 
                 let rect = route.polyline.boundingMapRect
@@ -123,6 +127,7 @@ class PrimaryContentViewController: UIViewController, CLLocationManagerDelegate 
 
         self.pulleyViewController?.displayMode = .automatic
     }
+
     
     @IBAction func runPrimaryContentTransitionWithoutAnimation(sender: AnyObject) {
         let primaryContent = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PrimaryTransitionTargetViewController")
@@ -137,7 +142,7 @@ class PrimaryContentViewController: UIViewController, CLLocationManagerDelegate 
     }
 }
 
-extension PrimaryContentViewController: PulleyPrimaryContentControllerDelegate {
+extension PrimaryContentViewController: FriendDelegate {
     
     func makeUIAdjustmentsForFullscreen(progress: CGFloat, bottomSafeArea: CGFloat) {
 
@@ -146,5 +151,17 @@ extension PrimaryContentViewController: PulleyPrimaryContentControllerDelegate {
     func drawerChangedDistanceFromBottom(drawer: PulleyViewController, distance: CGFloat, bottomSafeArea: CGFloat) {
 
     }
+    
+    func selectIndex(index: Int) {
+        print("PrimaryContentViewController selectIndex", index)
+        let friends = Friend().getFriends()
+        let friend = friends[index]
+        print("friend", friend)
+        
+        let coordinateOne = CLLocationCoordinate2D(latitude: CLLocationDegrees(exactly: 37.2374864)!, longitude: CLLocationDegrees(exactly: -90.9092899)!)
+        
+        let friendLocation = CLLocationCoordinate2D(latitude: CLLocationDegrees(exactly: friend.coordinate.latitude)!, longitude: CLLocationDegrees(exactly: friend.coordinate.longitude)!)
+        
+        createRouteTo(from: coordinateOne, to: friendLocation)
+    }
 }
-

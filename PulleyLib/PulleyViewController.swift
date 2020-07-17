@@ -32,6 +32,9 @@ import UIKit
      *  Called when the current drawer display mode changes (leftSide vs bottomDrawer). Make UI changes to account for this here.
      */
     @objc optional func drawerDisplayModeDidChange(drawer: PulleyViewController)
+    
+    
+
 }
 
 /**
@@ -53,14 +56,15 @@ import UIKit
      *  Return the support drawer positions for your drawer.
      */
     @objc optional func supportedDrawerPositions() -> [PulleyPosition]
+    
+
 }
 
 /**
  *  View controllers that are the main content can implement this to receive changes in state.
  */
 @objc public protocol PulleyPrimaryContentControllerDelegate: PulleyDelegate {
-    
-    // Not currently used for anything, but it's here for parity with the hopes that it'll one day be used.
+    // Not currently used for anything, but it's here for parity with the hopes that it'll one day be used
 }
 
 /**

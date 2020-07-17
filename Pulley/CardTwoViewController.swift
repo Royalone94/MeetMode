@@ -11,15 +11,12 @@ import UIKit
 class CardTwoViewController: UIViewController {
 
     @IBOutlet weak var imgProfile: UIImageView!
-    
     @IBOutlet weak var lblUserName: UILabel!
     @IBOutlet weak var lblDistance: UILabel!
     
-//    @IBOutlet weak var imgCard: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         // Do any additional setup after loading the view.
     }
     
@@ -28,7 +25,6 @@ class CardTwoViewController: UIViewController {
         imgProfile.layer.cornerRadius = imgProfile.bounds.width / 2
         lblUserName.layer.cornerRadius = 12
         
-
         let friends = Friend().getFriends()
         let friend = friends[self.view.tag - 1]
         lblUserName.text = friend.username

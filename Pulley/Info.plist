@@ -31,5 +31,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
+    
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+    <string>uber</string>
+    <string>waze</string>
+    <string>lyft</string>
+    <string>comgooglemaps</string>
+    <string>comgooglemaps-x-callback</string>
+    </array>
 </dict>
 </plist>

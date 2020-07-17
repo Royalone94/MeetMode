@@ -9,6 +9,7 @@
 import UIKit
 import Pulley
 import CardViewList
+import MapKit
 
 class DrawerContentViewController: UIViewController, CardViewListDelegete {
 
@@ -50,9 +51,10 @@ class DrawerContentViewController: UIViewController, CardViewListDelegete {
     }
     
     @IBAction func openDirectionsApp(_ sender: Any) {
-        print("openDirectionsApp")
+        self.pulleyViewController?.openDirectionsApp()
     }
     
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -195,10 +197,14 @@ extension PulleyViewController {
     public func selectIndex(_ index: Int) {
         (primaryContentViewController as? FriendDelegate)?.selectIndex?(index: index)
     }
+    
+    public func openDirectionsApp() {
+      (primaryContentViewController as? FriendDelegate)?.openDirectionsApp?()
+    }
 }
 
 
 @objc public protocol FriendDelegate: PulleyPrimaryContentControllerDelegate {
-    
-        @objc optional func selectIndex(index: Int)
+    @objc optional func openDirectionsApp()
+    @objc optional func selectIndex(index: Int)
 }

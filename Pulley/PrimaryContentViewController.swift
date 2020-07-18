@@ -169,6 +169,8 @@ extension PrimaryContentViewController: FriendDelegate {
         
         let friendLocation = CLLocationCoordinate2D(latitude: CLLocationDegrees(exactly: friend.coordinate.latitude)!, longitude: CLLocationDegrees(exactly: friend.coordinate.longitude)!)
         self.destinationLocation = friendLocation
+        
+        createRouteTo(from: coordinateOne, to: friendLocation, transportType:.automobile)
         createRouteTo(from: coordinateOne, to: friendLocation, transportType:.walking)
     }
     

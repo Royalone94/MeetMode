@@ -170,6 +170,10 @@ extension PrimaryContentViewController: FriendDelegate {
         createRouteTo(from: coordinateOne, to: friendLocation, transportType:.walking)
     }
     
+    func calculateRoute(transportType: MKDirectionsTransportType){
+        createRouteTo(from: self.currentLocation, to: self.destinationLocation, transportType:transportType)
+    }
+    
     func openDirectionsApp() {
         print("openDirectionsApp")
         let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)

@@ -48,9 +48,12 @@ class DrawerContentViewController: UIViewController, CardViewListDelegete {
     
     @IBAction func onWalkingClicked(_ sender: Any) {
         print("onWalkingClicked")
+        self.pulleyViewController?.calculateRoute(transportType: .walking)
+        
     }
     @IBAction func onDrivingClicked(_ sender: Any) {
         print("onDrivingClicked")
+        self.pulleyViewController?.calculateRoute(transportType: .automobile)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -162,21 +165,6 @@ extension DrawerContentViewController: PulleyDrawerViewControllerDelegate {
     }
 }
 
-//extension DrawerContentViewController:  RouteDelegate {
-//    func routeCalced(route: MKRoute) {
-//        print("routeCalced ********************")
-//
-//        if route.transportType == .walking {
-//            lblWalkingTime.text = String(format:"%f", route.expectedTravelTime) + " min"
-//            lblDistance.text = String(format:"%f", route.distance) + " mi"
-//        } else if route.transportType == .automobile {
-//            lblDrivingTime.text = String(format:"%f", route.distance) + " mi"
-//            lblDistance.text = String(format:"%f", route.distance) + " mi"
-//        }
-//    }
-//}
-
-
 extension DrawerContentViewController {
     public func routeCalced(route: MKRoute) {
         if route.transportType == .walking {
@@ -191,6 +179,11 @@ extension DrawerContentViewController {
 
 
 extension PulleyViewController {
+    public  func calculateRoute(transportType: MKDirectionsTransportType){
+         (primaryContentViewController as? PrimaryContentViewController)?.calculateRoute(transportType: transportType)
+    }
+       
+    
     public func routeCalced(route: MKRoute) {
         (drawerContentViewController as? DrawerContentViewController)?.routeCalced(route: route)
     }

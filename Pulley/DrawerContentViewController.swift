@@ -75,83 +75,26 @@ class DrawerContentViewController: UIViewController, CardViewListDelegete {
 
         self.cardViewList.animationScroll = .transformToLeft
         self.cardViewList.isClickable = true
-//        cardViewList.animationScroll = .none
-        /** Set animation click for CardView. Default is none */
-//        cardViewList.clickAnimation = .none
         self.cardViewList.grid = 1
-        cardViewList.maxWidth = 100
-            
-        /** Set max height of CardView in percent(%) of containerView. Default is 100 */
-        cardViewList.maxHeight = 100
         self.cardViewList.cornerRadius = 12.0
         /** Set shadow size of card view in pixel. Default is 5.0 */
-        cardViewList.isShadowEnable = false
+        self.cardViewList.isShadowEnable = false
         self.cardViewList.generateCardViewList(containerView: cardContainerHorizontal, viewControllers: cardViewControllers1, listType: .horizontal, identifier: "horizontalCard")
-        
         self.cardViewList.delegete = self
 
     }
     
-    
-       func cardView(willDisplay scrollView: UIScrollView, identifierCards identifier: String) {
-           if identifier == horizontalCardIdentifier {
-               print("Horizontal card view will display!")
-           } else {
-               print("Vertical card view will display!")
-           }
-       }
-       
-       // You can control CardView from here
-       func cardView(_ scrollView: UIScrollView, willAttachCardView cardView: UIView, identifierCards identifier: String, index: Int) {
-           print(cardView.frame)
-           if identifier == horizontalCardIdentifier {
-               print("Horizontal card view attached!")
-           } else {
-               print("Vertical card view attached!")
-           }
-       }
-       
-       func cardView(_ scrollView: UIScrollView, willAttachCardViewController cardViewController: UIViewController, identifierCards identifier: String, index: Int) {
-           if identifier == horizontalCardIdentifier {
-               print("Horizontal card view attached!")
-           } else {
-               print("Vertical card view attached!")
-           }
-       }
-       
-       func cardView(_ scrollView: UIScrollView, didFinishDisplayCardViews cardViews: [UIView], identifierCards identifier: String) {
-           print(cardViews.count)
-           if identifier == horizontalCardIdentifier {
-               print("Horizontal card view finish display!")
-           } else {
-               print("Vertical card view finish display!")
-           }
-       }
-       
-       func cardView(_ scrollView: UIScrollView, didFinishDisplayCardViewControllers cardViewsController: [UIViewController], identifierCards identifier: String) {
-           if identifier == horizontalCardIdentifier {
-               print("Horizontal card view finish display!")
-           } else {
-               print("Vertical card view finish display!")
-           }
-       }
        
        func cardView(_ scrollView: UIScrollView, didSelectCardView cardView: UIView, identifierCards identifier: String, index: Int) {
            if identifier == horizontalCardIdentifier {
                 print("Horizontal card view didSelectCardView!", index)
+                self.cardContainerHorizontal.isHidden = true
                 self.pulleyViewController?.selectIndex(index)
            } else {
                print("Vertical card view finish display!")
            }
        }
        
-       func cardView(_ scrollView: UIScrollView, didSelectCardViewController cardViewController: UIViewController, identifierCards identifier: String, index: Int) {
-           if identifier == horizontalCardIdentifier {
-               print("Horizontal card view didSelectCardViewController!", index)
-           } else {
-               print("Vertical card view finish display!")
-           }
-       }
     
     @objc fileprivate func bounceDrawer() {
         
@@ -195,6 +138,7 @@ extension DrawerContentViewController: PulleyDrawerViewControllerDelegate {
 
 extension PulleyViewController {
     public func selectIndex(_ index: Int) {
+        
         (primaryContentViewController as? FriendDelegate)?.selectIndex?(index: index)
     }
     

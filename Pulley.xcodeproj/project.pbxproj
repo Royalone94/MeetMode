@@ -18,6 +18,7 @@
 		84C49C9124C03AF700AAA69B /* CardTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C49C8324BFA6A000AAA69B /* CardTwoViewController.xib */; };
 		84C49C9424C04E2700AAA69B /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C49C9224C04A6000AAA69B /* Friend.swift */; };
 		84C49C9A24C0EAD800AAA69B /* PrimaryContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C49C9924C0EAD700AAA69B /* PrimaryContentViewController.swift */; };
+		84C49C9C24C24DA600AAA69B /* FormButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C49C9B24C24DA500AAA69B /* FormButton.swift */; };
 		853FCF2622F9F98F006829F2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853FCF2422F9F98D006829F2 /* MapKit.framework */; };
 		C6C51DDD1F5108980079B57F /* UIView+constrainToParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C51DDC1F5108980079B57F /* UIView+constrainToParent.swift */; };
 		C6DF73D31D2DE2B500735EBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DF73D21D2DE2B500735EBC /* AppDelegate.swift */; };
@@ -63,6 +64,7 @@
 		84C49C8424BFA6A000AAA69B /* CardTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTwoViewController.swift; sourceTree = "<group>"; };
 		84C49C9224C04A6000AAA69B /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		84C49C9924C0EAD700AAA69B /* PrimaryContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryContentViewController.swift; sourceTree = "<group>"; };
+		84C49C9B24C24DA500AAA69B /* FormButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormButton.swift; sourceTree = "<group>"; };
 		853FCF2422F9F98D006829F2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B9DC56FA5112EC9558707C20 /* Pods-PulleyDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulleyDemo.release.xcconfig"; path = "Target Support Files/Pods-PulleyDemo/Pods-PulleyDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C6131BB71D305995002F27F3 /* PulleyPassthroughScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PulleyPassthroughScrollView.swift; path = PulleyLib/PulleyPassthroughScrollView.swift; sourceTree = SOURCE_ROOT; };
@@ -163,6 +165,7 @@
 				C6DF73E91D2DFE7F00735EBC /* DrawerContentViewController.swift */,
 				D2C07C7A2129BC0F00ED38D7 /* CustomMaskExample.swift */,
 				84C49C9224C04A6000AAA69B /* Friend.swift */,
+				84C49C9B24C24DA500AAA69B /* FormButton.swift */,
 				84C49C8424BFA6A000AAA69B /* CardTwoViewController.swift */,
 				84C49C8324BFA6A000AAA69B /* CardTwoViewController.xib */,
 				C6131BB21D303FE0002F27F3 /* Supporting Files */,
@@ -337,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C49C9C24C24DA600AAA69B /* FormButton.swift in Sources */,
 				D2C07C7C2129BC8B00ED38D7 /* CustomMaskExample.swift in Sources */,
 				84C49C8F24BFAB8900AAA69B /* CardTwoViewController.swift in Sources */,
 				C6DF73EA1D2DFE7F00735EBC /* DrawerContentViewController.swift in Sources */,

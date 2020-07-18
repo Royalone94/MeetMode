@@ -164,6 +164,8 @@ extension PrimaryContentViewController: FriendDelegate {
         let friendLocation = CLLocationCoordinate2D(latitude: CLLocationDegrees(exactly: friend.coordinate.latitude)!, longitude: CLLocationDegrees(exactly: friend.coordinate.longitude)!)
         self.destinationLocation = friendLocation
         createRouteTo(from: coordinateOne, to: friendLocation)
+        
+        
     }
     
     func openDirectionsApp() {
@@ -271,7 +273,6 @@ extension PrimaryContentViewController: FriendDelegate {
         let url:URL! = self.prepareURIFor( latitude: self.destinationLocation.latitude, longitude:self.destinationLocation.longitude,fromLatitude: self.currentLocation.latitude,
                                       fromLongitude:self.currentLocation.longitude,
                                       navigation: PrimaryContentViewController.NavigationType.walking)
-        print(url)
         if isInstalledOf(app: "comgooglemaps") {
              UIApplication.shared.openURL(url)
         } else {

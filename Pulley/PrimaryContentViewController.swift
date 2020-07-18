@@ -32,6 +32,8 @@ class PrimaryContentViewController: UIViewController, CLLocationManagerDelegate 
         locationManager.startUpdatingLocation()
         
         let coordinateOne = CLLocationCoordinate2D(latitude: CLLocationDegrees(exactly: 37.2374864)!, longitude: CLLocationDegrees(exactly: -90.9092899)!)
+        
+        self.currentLocation = coordinateOne
         let coordinateTwo = CLLocationCoordinate2D(latitude: CLLocationDegrees(exactly: 37.2338247)!, longitude: CLLocationDegrees(exactly: -90.9917311)!)
         
         createRouteTo(from: coordinateOne, to: coordinateTwo, transportType:.automobile)
@@ -54,7 +56,7 @@ class PrimaryContentViewController: UIViewController, CLLocationManagerDelegate 
         let location = locations.last! as CLLocation
         let currentLocation = location.coordinate
         
-        self.currentLocation = currentLocation
+//        self.currentLocation = currentLocation
         let coordinateRegion = MKCoordinateRegion(center: currentLocation, latitudinalMeters: 800, longitudinalMeters: 800)
         mapView.setRegion(coordinateRegion, animated: true)
         locationManager.stopUpdatingLocation()

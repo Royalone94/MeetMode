@@ -180,10 +180,10 @@ extension DrawerContentViewController: PulleyDrawerViewControllerDelegate {
 extension DrawerContentViewController {
     public func routeCalced(route: MKRoute) {
         if route.transportType == .walking {
-            lblWalkingTime.text = String(format:"%f", Double(route.expectedTravelTime)/Double(60.0)) + " min"
+            lblWalkingTime.text = String(format:"%d", Int(ceil(Double(route.expectedTravelTime)/Double(60.0)))) + " min"
 //            lblDistance.text = String(format:"%f", route.distance) + " mi"
         } else if route.transportType == .automobile {
-            lblDrivingTime.text = String(format:"%f", Double(route.expectedTravelTime)/Double(60.0)) + " min"
+            lblDrivingTime.text = String(format:"%d", Int(ceil(Double(route.expectedTravelTime)/Double(60.0)))) + " min"
 //            lblDistance.text = String(format:"%f", route.distance) + " mi"
         }
     }

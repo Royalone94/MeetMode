@@ -10,6 +10,10 @@ import UIKit
 import MapKit
 import Pulley
 
+@objc public protocol RouteDelegate: class {
+    @objc optional func routeCalced(route: MKRoute)
+}
+
 class PrimaryContentViewController: UIViewController, CLLocationManagerDelegate , MKMapViewDelegate {
     
     @IBOutlet var mapView: MKMapView!
@@ -18,6 +22,8 @@ class PrimaryContentViewController: UIViewController, CLLocationManagerDelegate 
     var currentLocation: CLLocationCoordinate2D = CLLocationCoordinate2D()
     var destinationLocation: CLLocationCoordinate2D = CLLocationCoordinate2D()
     var currentRouteOverlay: MKRoute = MKRoute()
+
+    public weak var delegate: RouteDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +39,9 @@ class PrimaryContentViewController: UIViewController, CLLocationManagerDelegate 
         
         let coordinateOne = CLLocationCoordinate2D(latitude: CLLocationDegrees(exactly: 37.2374864)!, longitude: CLLocationDegrees(exactly: -90.9092899)!)
         let coordinateTwo = CLLocationCoordinate2D(latitude: CLLocationDegrees(exactly: 37.2338247)!, longitude: CLLocationDegrees(exactly: -90.9917311)!)
-        createRouteTo(from: coordinateOne, to: coordinateTwo)
+        
+        createRouteTo(from: coordinateOne, to: coordinateTwo, transportType:.automobile)
+        createRouteTo(from: coordinateOne, to: coordinateTwo, transportType:.walking)
     }
     
     func setUpMapView() {
@@ -62,13 +70,13 @@ class PrimaryContentViewController: UIViewController, CLLocationManagerDelegate 
        print(error.localizedDescription)
     }
 
-    func createRouteTo(from: CLLocationCoordinate2D,to: CLLocationCoordinate2D) {
+    func createRouteTo(from: CLLocationCoordinate2D,to: CLLocationCoordinate2D, transportType: MKDirectionsTransportType) {
         
         if(CLLocationCoordinate2DIsValid(from) && CLLocationCoordinate2DIsValid(to)) {
             let directionRequest = MKDirections.Request()
             directionRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: from, addressDictionary: nil))
             directionRequest.destination = MKMapItem(placemark: MKPlacemark(coordinate: to, addressDictionary: nil))
-            directionRequest.transportType = .walking
+            directionRequest.transportType = transportType
             //THIS MAKE the request for multiple routes if possible
             directionRequest.requestsAlternateRoutes = true
             
@@ -104,7 +112,9 @@ class PrimaryContentViewController: UIViewController, CLLocationManagerDelegate 
                 }
                 
                 //here I add the first to the MapView
+                
                 let route = response.routes[0]
+                self.delegate?.routeCalced?(route: route)
                 self.currentRouteOverlay = route
                 self.mapView.addOverlay(route.polyline, level: .aboveRoads)
                 
@@ -163,9 +173,7 @@ extension PrimaryContentViewController: FriendDelegate {
         
         let friendLocation = CLLocationCoordinate2D(latitude: CLLocationDegrees(exactly: friend.coordinate.latitude)!, longitude: CLLocationDegrees(exactly: friend.coordinate.longitude)!)
         self.destinationLocation = friendLocation
-        createRouteTo(from: coordinateOne, to: friendLocation)
-        
-        
+        createRouteTo(from: coordinateOne, to: friendLocation, transportType:.walking)
     }
     
     func openDirectionsApp() {

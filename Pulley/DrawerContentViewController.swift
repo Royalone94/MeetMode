@@ -11,6 +11,13 @@ import Pulley
 import CardViewList
 import MapKit
 
+
+@objc public protocol FriendDelegate: PulleyPrimaryContentControllerDelegate {
+    @objc optional func openDirectionsApp()
+    @objc optional func selectIndex(index: Int)
+}
+
+
 class DrawerContentViewController: UIViewController, CardViewListDelegete {
 
     // Pulley can apply a custom mask to the panel drawer. This variable toggles an example.
@@ -22,14 +29,29 @@ class DrawerContentViewController: UIViewController, CardViewListDelegete {
     @IBOutlet weak var cardContainerHorizontal: UIView!
     fileprivate let horizontalCardIdentifier = "horizontalCard"
     
+    @IBOutlet weak var btnWalking: FormButton!
+    @IBOutlet weak var btnDriving: FormButton!
+    @IBOutlet weak var lblAddress: UILabel!
+    @IBOutlet weak var lblDistance: UILabel!
+    @IBOutlet weak var lblWalkingTime: UILabel!
+    @IBOutlet weak var lblDrivingTime: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         gripperView.layer.cornerRadius = 2.5
         self.cardViewList = CardViewList()
+        self.btnWalking.isHidden = true
+        self.btnDriving.isHidden = true
+        self.lblAddress.isHidden = false
     }
     
+    @IBAction func onWalkingClicked(_ sender: Any) {
+        print("onWalkingClicked")
+    }
+    @IBAction func onDrivingClicked(_ sender: Any) {
+        print("onDrivingClicked")
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -89,6 +111,9 @@ class DrawerContentViewController: UIViewController, CardViewListDelegete {
            if identifier == horizontalCardIdentifier {
                 print("Horizontal card view didSelectCardView!", index)
                 self.cardContainerHorizontal.isHidden = true
+                self.btnWalking.isHidden = false
+                self.btnDriving.isHidden = false
+                self.lblAddress.isHidden = true
                 self.pulleyViewController?.selectIndex(index)
            } else {
                print("Vertical card view finish display!")
@@ -135,10 +160,22 @@ extension DrawerContentViewController: PulleyDrawerViewControllerDelegate {
     }
 }
 
+extension DrawerContentViewController:  RouteDelegate {
+    func routeCalced(route: MKRoute) {
+        print("routeCalced ********************")
+        
+        if route.transportType == .walking {
+            lblWalkingTime.text = String(format:"%f", route.expectedTravelTime) + " min"
+            lblDistance.text = String(format:"%f", route.distance) + " mi"
+        } else if route.transportType == .automobile {
+            lblDrivingTime.text = String(format:"%f", route.distance) + " mi"
+            lblDistance.text = String(format:"%f", route.distance) + " mi"
+        }
+    }
+}
 
 extension PulleyViewController {
     public func selectIndex(_ index: Int) {
-        
         (primaryContentViewController as? FriendDelegate)?.selectIndex?(index: index)
     }
     
@@ -147,8 +184,3 @@ extension PulleyViewController {
     }
 }
 
-
-@objc public protocol FriendDelegate: PulleyPrimaryContentControllerDelegate {
-    @objc optional func openDirectionsApp()
-    @objc optional func selectIndex(index: Int)
-}

@@ -99,6 +99,8 @@ class DrawerContentViewController: UIViewController, CardViewListDelegete {
         self.cardViewList.isClickable = true
         self.cardViewList.grid = 1
         self.cardViewList.cornerRadius = 12.0
+        self.cardViewList.maxWidth  = 100
+        self.cardViewList.maxHeight  = 100
         /** Set shadow size of card view in pixel. Default is 5.0 */
         self.cardViewList.isShadowEnable = false
         self.cardViewList.generateCardViewList(containerView: cardContainerHorizontal, viewControllers: cardViewControllers1, listType: .horizontal, identifier: "horizontalCard")
@@ -160,21 +162,39 @@ extension DrawerContentViewController: PulleyDrawerViewControllerDelegate {
     }
 }
 
-extension DrawerContentViewController:  RouteDelegate {
-    func routeCalced(route: MKRoute) {
-        print("routeCalced ********************")
-        
+//extension DrawerContentViewController:  RouteDelegate {
+//    func routeCalced(route: MKRoute) {
+//        print("routeCalced ********************")
+//
+//        if route.transportType == .walking {
+//            lblWalkingTime.text = String(format:"%f", route.expectedTravelTime) + " min"
+//            lblDistance.text = String(format:"%f", route.distance) + " mi"
+//        } else if route.transportType == .automobile {
+//            lblDrivingTime.text = String(format:"%f", route.distance) + " mi"
+//            lblDistance.text = String(format:"%f", route.distance) + " mi"
+//        }
+//    }
+//}
+
+
+extension DrawerContentViewController {
+    public func routeCalced(route: MKRoute) {
         if route.transportType == .walking {
-            lblWalkingTime.text = String(format:"%f", route.expectedTravelTime) + " min"
-            lblDistance.text = String(format:"%f", route.distance) + " mi"
+            lblWalkingTime.text = String(format:"%f", Double(route.expectedTravelTime)/Double(60.0)) + " min"
+//            lblDistance.text = String(format:"%f", route.distance) + " mi"
         } else if route.transportType == .automobile {
-            lblDrivingTime.text = String(format:"%f", route.distance) + " mi"
-            lblDistance.text = String(format:"%f", route.distance) + " mi"
+            lblDrivingTime.text = String(format:"%f", Double(route.expectedTravelTime)/Double(60.0)) + " min"
+//            lblDistance.text = String(format:"%f", route.distance) + " mi"
         }
     }
 }
 
+
 extension PulleyViewController {
+    public func routeCalced(route: MKRoute) {
+        (drawerContentViewController as? DrawerContentViewController)?.routeCalced(route: route)
+    }
+    
     public func selectIndex(_ index: Int) {
         (primaryContentViewController as? FriendDelegate)?.selectIndex?(index: index)
     }

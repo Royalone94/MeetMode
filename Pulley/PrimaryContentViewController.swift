@@ -10,20 +10,14 @@ import UIKit
 import MapKit
 import Pulley
 
-@objc public protocol RouteDelegate: class {
-    @objc optional func routeCalced(route: MKRoute)
-}
-
 class PrimaryContentViewController: UIViewController, CLLocationManagerDelegate , MKMapViewDelegate {
     
     @IBOutlet var mapView: MKMapView!
     
     fileprivate let locationManager: CLLocationManager = CLLocationManager()
-    var currentLocation: CLLocationCoordinate2D = CLLocationCoordinate2D()
+    public var currentLocation: CLLocationCoordinate2D = CLLocationCoordinate2D()
     var destinationLocation: CLLocationCoordinate2D = CLLocationCoordinate2D()
     var currentRouteOverlay: MKRoute = MKRoute()
-
-    public weak var delegate: RouteDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,7 +108,7 @@ class PrimaryContentViewController: UIViewController, CLLocationManagerDelegate 
                 //here I add the first to the MapView
                 
                 let route = response.routes[0]
-                self.delegate?.routeCalced?(route: route)
+                self.pulleyViewController?.routeCalced(route: route)
                 self.currentRouteOverlay = route
                 self.mapView.addOverlay(route.polyline, level: .aboveRoads)
                 

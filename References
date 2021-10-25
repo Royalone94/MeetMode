@@ -1,0 +1,18 @@
+https://www.codementor.io/@muneebali/mapkit-user-current-location-10xdbyy1v3
+https://www.raywenderlich.com/10028489-routing-with-mapkit-and-core-location
+https://stackoverflow.com/questions/2834523/drawing-a-route-in-mapkit-in-ios
+https://stackoverflow.com/questions/45854405/multiple-routes-between-two-locations-in-mkmapview
+
+https://stackoverflow.com/questions/42762994/ios-getting-no-route-from-two-coordinates-from-google-directions-api
+
+http://findnerd.com/list/view/Making-UIImageView-Clickable-Using-UITapGestureRecognizer/29648/
+
+
+    public static var automobile: MKDirectionsTransportType { get }
+
+    public static var walking: MKDirectionsTransportType { get }
+
+    @available(iOS 9.0, *)
+    public static var transit: MKDirectionsTransportType { get } // Only supported for ETA calculations
+
+    public static var any: MKDirectionsTransportType { get }
